@@ -1,0 +1,137 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background: #f4f7fb;
+    color: #172033;
+}
+
+.edit-container {
+    width: 100%;
+    max-width: 480px;
+}
+
+.edit-card {
+    background: #ffffff;
+    padding: 38px;
+    border-radius: 18px;
+    border: 1px solid #edf0f5;
+    box-shadow: 0 12px 40px rgba(15, 23, 42, 0.07);
+}
+
+.icon-box {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eaf2ff;
+    color: #2563eb;
+    border-radius: 14px;
+    font-size: 25px;
+    margin-bottom: 22px;
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #111827;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #7b8495;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.form-group {
+    margin-bottom: 21px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 9px;
+    color: #374151;
+}
+
+input {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #e1e5ec;
+    border-radius: 10px;
+    background: #fafbfc;
+    font-size: 14px;
+    color: #1f2937;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+input:focus {
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+button,
+.back-btn {
+    flex: 1;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button {
+    border: none;
+    background: #2563eb;
+    color: #ffffff;
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.back-btn {
+    border: 1px solid #e1e5ec;
+    background: #ffffff;
+    color: #4b5563;
+}
+
+.back-btn:hover {
+    background: #f3f4f6;
+}
+
+@media (max-width: 480px) {
+    .edit-card {
+        padding: 26px 21px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+}

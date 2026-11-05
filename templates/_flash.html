@@ -1,0 +1,9 @@
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+  <div style="max-width:720px;margin:16px auto;padding:0 16px;">
+    {% for message in messages %}
+    <div role="alert" style="background:#eef2ff;border:1px solid #c7d2fe;color:#1e293b;padding:10px 14px;border-radius:8px;margin-bottom:8px;">{{ message }}</div>
+    {% endfor %}
+  </div>
+  {% endif %}
+{% endwith %}

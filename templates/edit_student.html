@@ -1,0 +1,98 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Student | Student Management</title>
+
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="{{ url_for('static', filename='favicon.svg') }}"
+    >
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='edit.css') }}"
+    >
+</head>
+
+<body>
+
+    {% include "_flash.html" %}
+
+    <main class="edit-container">
+
+        <section class="edit-card">
+
+            <div class="icon-box">✎</div>
+
+            <h2>Edit Student</h2>
+
+            <p class="subtitle">
+                Update the student's information using the form below.
+            </p>
+
+            <form method="POST">
+
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value="{{ student['name'] }}"
+                        placeholder="Enter student name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value="{{ student['email'] }}"
+                        placeholder="Enter email address"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Course</label>
+
+                    <input
+                        type="text"
+                        id="course"
+                        name="course"
+                        value="{{ student['course'] }}"
+                        placeholder="Enter course name"
+                        required
+                    >
+                </div>
+
+                <div class="button-group">
+
+                    <a href="{{ url_for('students') }}" class="back-btn">
+                        Cancel
+                    </a>
+
+                    <button type="submit">
+                        Save Changes →
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
