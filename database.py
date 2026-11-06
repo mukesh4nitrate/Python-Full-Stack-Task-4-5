@@ -4,13 +4,12 @@ import os
 from pathlib import Path
 
 # Railway uses persistent storage at /data
-if os.getenv("RAILWAY_ENVIRONMENT"):
-    DATABASE = Path("/data/database.db")
+volume_path = os.getenv("RAILWAY_VOLUME_MOUNT_PATH")
+
+if volume_path:
+    DATABASE = Path(volume_path) / "database.db"
 else:
     DATABASE = Path(__file__).resolve().parent / "database.db"
- 
-# Keep database.db in the project folder
-DATABASE = Path(__file__).resolve().parent / "database.db"
 
 
 def get_db():
