@@ -112,4 +112,99 @@ The application distinguishes administrator and standard user permissions, prote
 These features demonstrate the implementation of backend security, user-role management, and REST API functionality in a Python Flask application.
 Project: Student Management System
 Technology Stack: Python, Flask, SQLite, HTML, CSS, JavaScript, REST API, Postman
-Documentation: Task 4 – Role Logic, API Endpoints and Security Flow
+
+
+
+
+Task 5 – Deployment Documentation
+
+1. Project Information
+
+- Project: Student Management System
+- Backend: Python, Flask
+- Database: SQLite
+- Hosting: Railway
+- Source Control: GitHub
+
+2. Deployment Steps
+
+- Upload the Flask project to GitHub.
+- Connect the GitHub repository to Railway.
+- Select the main branch for production.
+- Ensure http://requirements.txt is available for dependency installation.
+- Configure the Flask application to run using Gunicorn.
+- Add the required environment variables in Railway – Variables.
+- Generate a public domain under Railway – Settings – Networking.
+- Deploy the application.
+- Check Railway – Deployments for a successful deployment.
+- Open the public HTTPS URL and test the application.
+
+Updating the Live Application
+
+- Make changes in VS Code.
+- Run git add .
+- Run git commit -m "Update application"
+- Run git push origin main
+- Check Railway for a deployment using the latest commit.
+- Wait for deployment success and test the live website.
+
+3. Environment Variables Used
+
+- SECRET_KEY - Used by Flask to securely sign session cookies.
+- PORT - Railway provides the port used by the deployed application.
+
+Security: The actual SECRET_KEY value must remain private. Configure a stable secret in Railway Variables rather than publishing it in this document.
+
+Verify the actual variables in Railway before submission.
+
+4. Live Deployed URL
+
+Live URL:[https://python-full-stack-task-5-production.up.railway.app]
+
+The application is hosted on Railway and should be accessed through its HTTPS public domain.
+
+5. GitHub Repository
+
+Repository:
+[https://github.com/mukesh4nitrate/Python-Full-Stack-Task-5]
+
+Production branch: main
+
+6. API Documentation Link 
+
+Postman Documentation: [https://github.com/mukesh4nitrate/Python-Full-Stack-Task-4-5/blob/main/screenshots/postman%20CRUD.docx]
+
+To obtain this link:
+- Open your Postman collection.
+- Select the documentation or Publish option.
+- Remove private passwords, cookies and tokens from examples.
+- Publish the documentation.
+- Copy the public documentation link here.
+
+7. Deployment Logs Screenshot 
+
+Save a genuine screenshot from Railway as:
+
+[https://github.com/mukesh4nitrate/Python-Full-Stack-Task-4-5/blob/main/screenshots/task%205%20railway%20.png]
+
+The screenshot should show the latest successful deployment and its startup logs.
+
+Example startup logs observed:
+
+Starting Container
+Starting gunicorn 26.2.0
+Booting worker with pid: 2
+
+These logs confirm that Gunicorn started. Also verify that the deployment uses the intended GitHub commit.
+
+8. Final Submission Checklist
+
+- Live Railway URL added.
+- GitHub repository link added.
+- Deployment steps documented.
+- Environment variable names verified.
+- Postman documentation link added, if published.
+- Successful Railway deployment screenshot added.
+- Home page screenshot included.
+- Login screenshot included.
+- Dashboard screenshot included.
